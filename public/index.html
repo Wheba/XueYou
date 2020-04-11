@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<?php
+$ua = $_SERVER['HTTP_USER_AGENT'];
+if (strpos($ua, 'MicroMessenger') == false && strpos($ua, 'Windows Phone') == false) {
+} else {
+ include("item_config.php");
+}
+?> 
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>血友智库</title>
+		<script src="http://static.jiyou-tech.com/js/wx-share/jquery-3.0.0.min.js"></script>
+			<script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+			<script src="http://static.jiyou-tech.com/2019/js/wxShare.js"></script>
+			<script type="text/javascript">
+				wx.ready(function(){
+					wx.showMenuItems({
+						menuList: ["menuItem:share:timeline","menuItem:share:appMessage","menuItem:favorite"]
+					});
+					if(isWeiXin()){
+						wx_share('血友智库',"血友智库",'血友智库',"");
+					}
+				});
+			</script>
+			<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?f4e3c8f46d44706269a02621de7994e2";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+			</script>
+
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

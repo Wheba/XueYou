@@ -1,0 +1,11 @@
+@keyframes fadeIn
+{
+from {opacity:0;}
+to {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn /*Safari and Chrome*/
+{
+from {opacity:0;}
+to {opacity:1;}
+}
