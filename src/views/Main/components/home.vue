@@ -4,7 +4,7 @@
 			<swiper-slide v-for="item in sliderList" :key="item.id">
 				<div style="position: relative;width: 100%;height: 100%;" @click="onSlider(item)">
 						<img class="slideImg" :src="item.slider_img"/>
-						<p class="slideTitle" v-text="item.slider_name"></p>
+						<!-- <p class="slideTitle" v-text="item.slider_name"></p> -->
 				</div>
 			</swiper-slide>
 			<div class="swiper-pagination" slot="pagination"></div>

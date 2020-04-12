@@ -12,7 +12,7 @@ export default new Vuex.Store({
 		sliderList:[],
 		hotTagList:[],
 		tagItem:null,
-		imgUrl:'http://www.jiyou-tech.com/2020/522/images/'
+		imgUrl:'http://static.jiyou-tech.com/2020/522/'
   },
 	getters:{
 		getCount(state){
