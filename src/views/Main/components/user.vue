@@ -42,15 +42,15 @@
 				<img class="head" :src="editUserInfo.headimgurl"/>
 				<p class="title" style="margin-top: 8vw;">头像</p>
 				<p class="title">昵称</p>
-				<p class="title">生日</p>
+				<!-- <p class="title">生日</p>
 				<p class="title">所在地</p>
-				<p class="title">邮箱</p>
+				<p class="title">邮箱</p> -->
 				<img class="icon" :src="getImg('user/icon1.png')" style="height: calc(24/750*100vw);top: 27vw;"/>
-				<img class="icon" :src="getImg('user/icon2.png')" style="height: calc(28/750*100vw);top: 52.6vw;right: 5.5vw;"/>
+			<!-- 	<img class="icon" :src="getImg('user/icon2.png')" style="height: calc(28/750*100vw);top: 52.6vw;right: 5.5vw;"/> -->
 				<input style="top: 26vw;"  v-model="editUserInfo.user_name"/>
-				<input style="top: 39.4vw;"  v-model="editUserInfo.user_birth"/>
+	<!-- 			<input style="top: 39.4vw;"  v-model="editUserInfo.user_birth"/>
 				<input style="top: 52vw;"  v-model="editUserInfo.user_addr"/>
-				<input style="top: 65.5vw;"  v-model="editUserInfo.user_email"/>
+				<input style="top: 65.5vw;"  v-model="editUserInfo.user_email"/> -->
 				<button class="submit" @click="submitUserInfo">提交</button>
 			</div>
 		</div>
@@ -192,18 +192,18 @@
 					Toast('请先填写昵称')
 					return
 				}
-				if(!this.editUserInfo.user_birth){
-					Toast('请先填写生日')
-					return
-				}
-				if(!this.editUserInfo.user_addr){
-					Toast('请先填写地址')
-					return
-				}
-				if(!this.editUserInfo.user_email){
-					Toast('请先填写邮箱')
-					return
-				}
+				// if(!this.editUserInfo.user_birth){
+				// 	Toast('请先填写生日')
+				// 	return
+				// }
+				// if(!this.editUserInfo.user_addr){
+				// 	Toast('请先填写地址')
+				// 	return
+				// }
+				// if(!this.editUserInfo.user_email){
+				// 	Toast('请先填写邮箱')
+				// 	return
+				// }
 				this.isSubmitUserInfo=true
 				changeUserInfo(qs.stringify(this.editUserInfo)).then(res=>{
 					if(res.code==200){
@@ -345,13 +345,13 @@
 		.content{
 			position: relative;
 			width: calc(567/750*100vw);
-			height: calc(688/750*100vw);
+			height: calc(388/750*100vw);
 			background-color: #FFFFFF;
 			box-shadow: 0px 0px 20px 1px rgba(0,147,217,0.8);
 			.head{
 				position: absolute;
 				top: 7.7vw;
-				right: 9.6vw;
+				right: 6.6vw;
 				border-radius: 50%;
 				width: calc(90/750*100vw);
 				height: calc(90/750*100vw);
