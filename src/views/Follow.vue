@@ -1,6 +1,6 @@
 <template>
 	<div class="follow">
-		<!-- <img class="bg" :src="getImg('follow/bg2.jpg?v=001')"/> -->
+	<!-- 	<img class="contentBg" :src="getImg('follow/bg2.png?v=003')"/> -->
 		<img :src="getImg('excessive/leftTop.png?v=001')" class="leftTop" />
 		<img :src="getImg('excessive/rightBottom.png?v=001')" class="rightBottom" />
 		<img :src="getImg('follow/logo.png?v=001')" class="logo" />
@@ -185,12 +185,20 @@
 	.follow {
 		width: 100%;
 		height: 100%;
+		
+		.contentBg{
+			position: absolute;
+			width: calc(646/750*100vw);
+			left: 50%;
+			bottom: 0%;
+			transform: translate(-50%);
+		}
 
 		.leftTop {
 			position: fixed;
 			top: 0;
 			left: 0;
-			width: calc(391/750*100vw);
+			width: calc(316/750*100vw);
 			height: auto;
 		}
 
@@ -198,7 +206,7 @@
 			position: fixed;
 			bottom: 0;
 			right: 0;
-			width: calc(240/750*100vw);
+			width: calc(173/750*100vw);
 			height: auto;
 		}
 

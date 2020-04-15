@@ -78,10 +78,11 @@
 			toHome(){
 				this.typeInit()
 				if(this.$route.path=='/main/home'){
-					return
+					this.$router.replace('/follow')
+				}else{
+					this.type=2;
+					this.$router.replace('/main/home')
 				}
-				this.type=2;
-				this.$router.replace('/main/home')
 			},
 			toUser(){
 				this.typeInit()

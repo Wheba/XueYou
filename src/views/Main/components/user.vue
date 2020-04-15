@@ -192,6 +192,7 @@
 					Toast('请先填写昵称')
 					return
 				}
+				
 				// if(!this.editUserInfo.user_birth){
 				// 	Toast('请先填写生日')
 				// 	return
