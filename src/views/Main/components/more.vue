@@ -108,7 +108,7 @@
 		height: 100%;
 		.headContainer{
 			width: 100%;
-			height: calc(383/750*100vw);
+			height: calc(341/750*100vw);
 			overflow: hidden;
 			.head{
 				width: 100%;
@@ -122,7 +122,7 @@
 				box-sizing: border-box;
 				border-radius: 50%;
 				padding: 1.5vw;
-				top: 13vw;
+				top: 10vw;
 				right: 33.5vw;
 				img{
 					width: 100%;
@@ -133,8 +133,8 @@
 			.iconTitle{
 				position: absolute;
 				color: #FFFFFF;
-				font-size: 10vw;
-				top: 25vw;
+				font-size: 9vw;
+				top: 22vw;
 				text-align: center;
 				right: 0;
 				width: 78vw;

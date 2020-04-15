@@ -46,7 +46,7 @@
 	#hotTageList{
 		position: relative;
 		width: 100%;
-		height: calc(188/750*100vw);
+		height: calc(178/750*100vw);
 		background-color: #c2e6fa;
 		.line{
 			display: block;

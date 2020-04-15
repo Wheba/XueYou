@@ -168,7 +168,7 @@
 		height: 100%;
 
 		.swiper-container {
-			height: calc(384/750*100vw);
+			height: calc(341/750*100vw);
 			.slideImg{
 				width: 100%;
 				height: 100%;
@@ -258,10 +258,11 @@
 		.scrollBox{
 			position: absolute;
 			width: calc(4/750*100vw);
-			height: calc(100% - 384/750*100vw - 188/750*100vw);
+			height: calc(100% - 341/750*100vw - 178/750*100vw);
 			right: calc(10/750*100vw);
 			bottom: 0;
 			background-color: #a2d9f5;
+			overflow: hidden;
 			.scrollTop{
 				position: relative;
 				width: 100%;

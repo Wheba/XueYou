@@ -64,14 +64,14 @@ export default {
 			position: fixed;
 			top: 0;
 			left: 0;
-			width: calc(391/750*100vw);
+			width: calc(283/750*100vw);
 			height: auto;
 		}
 		.rightBottom{
 			position: fixed;
 			bottom: 0;
 			right: 0;
-			width: calc(240/750*100vw);
+			width: calc(173/750*100vw);
 			height: auto;
 		}
 	}

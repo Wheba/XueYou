@@ -228,7 +228,7 @@
 	}
 	.headContainer{
 		width: 100%;
-		height: calc(343/750*100vw);
+		height: calc(341/750*100vw);
 		overflow: hidden;
 		.head{
 			width: 100%;

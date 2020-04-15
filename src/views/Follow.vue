@@ -4,11 +4,11 @@
 		<img :src="getImg('excessive/leftTop.png?v=001')" class="leftTop" />
 		<img :src="getImg('excessive/rightBottom.png?v=001')" class="rightBottom" />
 		<img :src="getImg('follow/logo.png?v=001')" class="logo" />
-		<div class="container" :style="{bottom:containerBottom+'vw'}">
+		<div class="container">
 			<img class="title" :src="getImg('follow/title'+this.step+'.png?v=001')" />
-			<img class="titleLine" :src="getImg('follow/titleLine.png?v=001')" />
+			<img class="titleLine" :src="getImg('follow/titleLine.png?v=002')" />
 			<div class="stepBox1" v-show="step==1">
-				<div class="box" style="margin-top: 25vw;">
+				<div class="box" style="margin-top: 19vw;">
 					<img class="head" :class="{selectHead:user_group==1}" :src="getImg('follow/18down.png')" @click="changeGroup(1)" />
 					<img class="headBox" :src="getImg('follow/Q.png')" v-show="user_group==1" />
 					<img class="headSelect" :src="getImg('follow/select.png')" style="top: -4vw;right:-4vw;" v-show="user_group==1" />
@@ -71,16 +71,11 @@
 				selectTagBList: [], //选中的标签2列表
 				getTagBing: false,
 				isSubmit:false,
-				containerBottom:0,
 			}
 		},
 		created() {
 			if (!this.userInfo) {
 				this.$router.replace('/')
-			}else{
-				if(document.body.clientHeight/document.body.clientWidth>=1.8){
-					this.containerBottom=118/750*100
-				}
 			}
 		},
 		methods: {
@@ -176,12 +171,19 @@
 			/*返回上一步*/
 			back() {
 				this.step--;
+				if(this.step==2){
+					this.selectTagBList=[]
+				}
 			}
 		}
 	}
 </script>
 
 <style lang="scss" scoped="scoped">
+	img{
+		display: block;
+	}
+	
 	.follow {
 		width: 100%;
 		height: 100%;
@@ -198,7 +200,7 @@
 			position: fixed;
 			top: 0;
 			left: 0;
-			width: calc(316/750*100vw);
+			width: calc(283/750*100vw);
 			height: auto;
 		}
 
@@ -215,21 +217,18 @@
 			left: 0;
 			width: 100%;
 			height: calc(1106/750*100vw);
-			img{
-				display: block;
-			}
+			top: 50%;
+			transform: translateY(-50%);
 			.title {
-				height: calc(59/750*100vw);
+				height: calc(48/750*100vw);
 				width: auto;
-				padding-left: 4.3vw;
-				margin: 0vw auto;
+				margin: 17vw auto 0 auto;
 			}
 
 			.titleLine {
 				height: calc(8/750*100vw);
 				width: auto;
-				padding-left: 3.4vw;
-				margin: 2vw auto 0 auto;
+				margin: 2.7vw auto 0 auto;
 			}
 
 			.stepBox1 {
@@ -272,27 +271,29 @@
 			}
 
 			.setpBox2 {
-				width: calc(669/750*100vw);
-				height: 100vw;
-				padding-top: 1vw;
-				margin: 13vw auto 0 auto;
+				width: calc(670/750*100vw);
+				height: 92vw;
+				padding-top: 5vw;
+				margin: 6vw auto 0 auto;
 				display: flex;
-				align-content: space-between;
 				flex-wrap: wrap;
+				align-content: flex-start;
 				overflow: scroll;
 
 				.item {
-					width: calc(223/750*100vw);
+					width: 33%;
 					display: flex;
 					flex-direction: column;
 					align-items: center;
+					margin-bottom: 6vw;
 
 					.itemIconBox {
 						position: relative;
-						width: calc(143/750*100vw);
-						height: calc(143/750*100vw);
+						width: calc(126/750*100vw);
+						height: calc(126/750*100vw);
 						border-radius: 50%;
 						background-color: #FFFFFF;
+						box-shadow: 0px 0px 20px 1px rgba(0,147,217,0.2);
 
 						.icon {
 							width: 100%;
@@ -315,10 +316,10 @@
 					.title {
 						margin: 0;
 						padding: 0;
-						margin-top: 2vw;
+						margin-top: 1vw;
 						width: 100%;
 						color: #5e5f63;
-						font-size: 4.5vw;
+						font-size: 4.2vw;
 						text-align: center;
 					}
 
@@ -328,35 +329,36 @@
 				}
 			}
 			.setpBox3{
-				width: calc(634/750*100vw);
-				height: 100vw;
-				padding-top: 1vw;
-				margin: 13vw auto 0 auto;
+				width: calc(670/750*100vw);
+				height: 92vw;
+				padding-top: 5vw;
+				margin: 6vw auto 0 auto;
 				display: flex;
-				align-content: flex-start;
-				// justify-content: space-around;
 				flex-wrap: wrap;
+				align-content: flex-start;
+				justify-content: space-around;
 				overflow: scroll;
 				.item{
 					position: relative;
-					width: calc(281/750*100vw);
-					height: calc(114/750*100vw);
+					width: calc(259/750*100vw);
+					height: calc(104/750*100vw);
 					border-radius: 15vw;
-					margin: 0 calc(18/750*100vw) calc(76/750*100vw);
+					margin-bottom: calc(62/750*100vw);
 					background-color: #ffffff;
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
+					box-shadow: 0px 0px 20px 1px rgba(0,147,217,0.2);
 					.icon{
-						width: calc(70/750*100vw);
-						height: calc(70/750*100vw);
+						width: calc(55/750*100vw);
+						height: calc(55/750*100vw);
 						padding-left: calc(20/750*100vw);
 					}
 					p{
 						width: 23vw;
 						color: #646464;
-						font-size: 4vw;
-						padding-right: 4vw;
+						font-size: 3.9vw;
+						padding-right: 2vw;
 						box-sizing: border-box;
 					}
 					p.select{
@@ -378,28 +380,28 @@
 			.btnBox {
 				position: absolute;
 				width: 100%;
-				height: 16.5vw;
+				height: 14vw;
 				bottom: 0;
 				left: 0;
 
 				.tip {
-					padding-left: 5.5vw;
+					padding-left: 7vw;
 					margin: 0 auto;
-					height: calc(23/750*100vw);
+					height: calc(20/750*100vw);
 				}
 
 				.btnNext {
 					position: absolute;
-					bottom: 0.5vw;
-					left: calc(233/750*100vw);
-					width: calc(319/750*100vw);
+					bottom: 0vw;
+					left: calc(255/750*100vw);
+					width: calc(282/750*100vw);
 				}
 
 				.btnBack {
 					position: absolute;
-					height: calc(79/750*100vw);
-					bottom: 0.5vw;
-					left: 4.5vw;
+					height: calc(70/750*100vw);
+					bottom: 0;
+					left: 7.5vw;
 				}
 			}
 		}
