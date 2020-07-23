@@ -192,7 +192,7 @@
 	.container{
 			position: relative;
 			width: calc(647/750*100vw);
-			height: calc(100% - 384/750*100vw - 188/750*100vw);
+			height: calc(100% - 341/750*100vw - 178/750*100vw);
 			margin: 0 auto;
 			overflow: scroll;
 			.itemBox{

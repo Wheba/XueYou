@@ -11,6 +11,9 @@
 				<img :src="getImg('excessive/skip.png')" class="skip" @click="toHome"/>
 			</div>
 		</div>
+		<p style="position: absolute;left: 0;bottom: 5px;text-align: left;width: 100%;color: #0094dc;font-size: 10px;margin-left: 10px;">
+			MA-M_KOG-CN-0021-1
+		</p>
 	</div>
 </template>
 

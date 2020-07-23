@@ -376,6 +376,9 @@
 					background-color: #0087cb;
 				}
 			}
+			.setpBox3::-webkit-scrollbar {
+				display: none; /* Chrome Safari */
+			}
 
 			.btnBox {
 				position: absolute;
